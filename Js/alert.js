@@ -1,5 +1,3 @@
 "use strict";
-let admin;
-let myName = "Джон";
-admin=myName;
-alert (admin);
+let yourName = prompt("Как тебя зовут?", 'Имя');
+alert(yourName);

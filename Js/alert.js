@@ -1,8 +1,10 @@
 "use strict";
-let company = prompt("Какое офицальное название javascript?");
-if (company == 'ECMAScript') {
-	alert('Верно');
+let number = prompt("Введите число?");
+if (number > 0) {
+	alert(1);
+} else if (number<0) {
+	alert(-1);
 } else {
-	alert("Не знаете? ECMASScript");
+	alert(0);
 }
 

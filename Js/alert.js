@@ -1,8 +1,11 @@
 "use strict";
-let num;
-do {
-	num = prompt("Введите число больше 100?", 0);
-} while (num <= 100 && num);
+let n=30;
+notThis: for (let i= 2; i<=n ; i++) {
+	for (let j = 2; j < i; j++) {
+		if (i % j == 0) continue notThis;
+	}
+	alert(i);
+}
 
 
 

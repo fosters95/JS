@@ -1,15 +1,10 @@
 "use strict";
-let n=30;
-notThis: for (let i= 2; i<=n ; i++) {
-	for (let j = 2; j < i; j++) {
-		if (i % j == 0) continue notThis;
-	}
-	alert(i);
+let browser;
+if (browser == 'edge') {
+	alert ("You've got the Edge!");
+} else if (browser == 'Chrome' || 'Firefox' || 'Safari' || 'Opera') {
+	alert('Okay we support these browsers too');
 }
-
-
-
-
-
-
-
+else {
+	alert('We hope that this page looks ok!');
+}

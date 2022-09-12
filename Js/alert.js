@@ -1,5 +1,5 @@
 "use strict";
-const number = +prompt('Введите число между 0 и 3', '');
+const number = +prompt('Введите число между 0 и 3', '0123');
 switch (number) {
 	case 0:
 		alert('Вы ввели число 0');

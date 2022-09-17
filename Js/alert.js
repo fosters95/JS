@@ -1,18 +1,40 @@
 "use strict";
-let a = 6;
-let b = 'Hello';
-let div = document.querySelector('.out')
+let a = 9;
 
-console.log(a);
-let inputIn = document.querySelector('.input-in');
-let button = document.querySelector('button');
+// >= <= == (проверка равенства) != (не равно)
+// if (a != 9) {
+//     // выполнится если выражение в скобках true
+//     console.log('Yes');
+// } else {
+//     console.log('else');
+// }
 
-button.onclick = function (){
-    //кнопка будет нажата
-    console.log('Работает!');
-    // console.log(inputIn.value); // value - то что введено в инпут
-    let b = +inputIn.value; // + переводит из строки в число
-    console.log(b + 10);
-    div.innerHTML = b;
-    inputIn.value = '';
+const button = document.querySelector('button');
+const input = document.querySelector('.age');
+
+button.onclick = () => { // стрелочная ф-ция (аналогично function ())
+    let num = +input.value;
+    if (num >= 16 && num < 60) {
+        console.log('Welcome!');
+    } else if (num > 60) {
+        console.log('Ты точно сюда??');
+    } else {
+        console.log('Вход воспрещен!');
+    }
+
+
+    switch (num) {
+        case 15:
+            console.log('Потерпи еще год');
+            break;
+        case 16:
+            console.log('Yeahh!!');
+            break;
+        default:
+            console.log('gogoggo');
+    }
 }
+
+let b = 4;
+
+console.log (b == 3 || b == 7); //&& - и  || - или

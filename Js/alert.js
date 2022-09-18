@@ -1,22 +1,41 @@
 "use strict";
-let c = '(())';
-// цикл
-// c.length - длина строки
-console.log(c.length);
-let count = 0;
+// виды циклов:
+// for
+// while
+// for (старт; работаем пока верно; как изменяется счетчик) {}
+let div = document.querySelectorAll('.one')
+console.log(div)
+// div.style.backgroundColor = 'red'
+// for (let i = 0; i < div.length; i++) {
+//    console.log(div[i]);
+//    div[i].style.background = 'red';
+//    div[i].onclick = two
+// }
+// function two () {
+//     console.log('work!!!');
+// }
+//
+// let b = document.getElementsByClassName('one');
+// console.log(b);
+// let c = document.getElementsByTagName('div')
+// console.log(c);
+// for (let i = 0; i < b.length; i++) {
+//     b[i].style.border = '10px solid black';
+// }
 
-for (let i = 0; i < c.length; i++) {
-    // console.log(c[i]);
-    if (c[i] == '(') {
-        count++ // увеличиваем на 1
-    }
-    if (c[i] == ')'){
-        count--;
-    }
-    if (count < 0) {
-        // console.log(false);
-        break;
+document.querySelector('button').onclick = () => {
+    let r = document.querySelectorAll('input[type="radio"]');
+    console.log(r);
+    for (let i = 0; i < r.length; i++) {
+        if (r[i].checked) {
+            console.log(r[i].value);
         }
+    }
 }
-if (count != 0) console.log(false)
-else console.log(true);
+let out = ''
+for (let i = 0; i < 10; i++) {
+    if (i==6) continue;
+    out += i + ' ';
+    //if (i==6) break;
+}
+document.querySelector('#out').innerHTML = out;
